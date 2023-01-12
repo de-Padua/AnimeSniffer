@@ -188,3 +188,21 @@ button{
   border-radius: 0px 10px 10px 0;
 
 }
+@media (max-width: 1386px) {
+  .finder{
+    flex-direction: column;
+  }
+  .left-container{
+    height: 60vh;
+    width: 80%;
+    margin: 0;
+    padding: auto;
+    align-self: center;
+  }
+  label{
+    padding: 9px 10px;
+  }
+  .right-content{
+    width: 80%;
+  }
+}
