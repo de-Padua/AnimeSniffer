@@ -5,8 +5,9 @@ const search_url = document.querySelector(".urlSearch");
 class Data {
   async getDataFromImage() {
     const formData = new FormData(form);
+    console.log(formData)
     const result = await fetch("https://api.trace.moe/search", {
-      method: "POST",
+      method: "POST",     
       body: formData,
     });
     const data = await result.json();
@@ -74,6 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
      
       data.getDataFromUrl(search_url.value).then((data) => {
         ui.displayAnime(data);
+        search_url.value = ""
+
       });
       
     }
